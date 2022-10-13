@@ -5,6 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon -r tsconfig-paths/register src/app.ts | ./node_modules/.bin/bunyan",
+    "build": "ttsc -p .",
+    "start": "nodemon ./build/app.js",
     "lint:check": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint 'src/**/*.ts' --fix",
     "prettier:check": "prettier --check 'src/**/*.{ts,json}'",
@@ -44,6 +46,8 @@
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.1.0"
+    "tsconfig-paths": "^4.1.0",
+    "ttypescript": "^1.5.13",
+    "typescript-transform-paths": "^3.3.1"
   }
 }
